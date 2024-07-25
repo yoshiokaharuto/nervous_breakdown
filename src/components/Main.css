@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p {
+  font-size: 30px;
+  text-align: center;
+}
+button {
+  width: 25%;
+  height: 50px;
+  border-radius: 10px;
+  border: hidden;
+  font-size: 20px;
+  background-color: #00d12e;
+  color: white;
+  margin-top: 7%;
+  margin-bottom: 3%;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0ffff;
+}
+.container {
+  border: 5px solid rgb(40, 111, 1);
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.3rem;
+  background-color: rgb(40, 111, 1);
+  perspective: 700px; /*奥行きの指定*/
+}
+.card {
+  height: 130px;
+  width: 130px;
+  background-color: rgba(12, 213, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform-style: preserve-3d; /*3Dにする宣言*/
+  transition: 0.3s ease;
+}
+
+.back {
+  background-image: repeating-conic-gradient(
+    from 10deg at 50% 70%,
+    rgba(255, 233, 191, 1) 0deg,
+    rgba(12, 213, 0, 1) 20deg,
+    rgba(255, 233, 191, 1) 40deg
+  );
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden; /*背面が非表示*/
+  position: absolute;
+  cursor: pointer;
+}
+img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  background: rgba(12, 213, 0, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 233, 191, 1) 50%,
+    rgba(12, 213, 0, 1) 100%
+  );
+}
+.card.open {
+  transform: rotateY(180deg);
+}

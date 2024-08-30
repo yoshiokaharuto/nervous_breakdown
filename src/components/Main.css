@@ -7,7 +7,10 @@ p {
   font-size: 30px;
   text-align: center;
 }
-button {
+.body {
+  text-align: center;
+}
+.button {
   width: 25%;
   height: 50px;
   border-radius: 10px;
@@ -17,6 +20,9 @@ button {
   color: white;
   margin-top: 7%;
   margin-bottom: 3%;
+}
+.button:hover {
+  background-color: #00d12e;
 }
 body {
   height: 100vh;

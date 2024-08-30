@@ -11,7 +11,7 @@ function LevelSelector({ setLevel }) {
   return (
     <div className="level-selector">
       <button onClick={() => handleClick("easy")}>Easy</button>
-      <button onClick={() => handleClick("medium")}>Medium</button>
+      <button onClick={() => handleClick("medium")}>Normal</button>
       <button onClick={() => handleClick("hard")}>Hard</button>
     </div>
   );

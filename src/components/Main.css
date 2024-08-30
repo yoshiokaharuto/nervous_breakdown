@@ -7,11 +7,18 @@ p {
   font-size: 30px;
   text-align: center;
 }
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0ffff;
+}
 .body {
   text-align: center;
 }
 .button {
-  width: 25%;
+  width: 100%;
   height: 50px;
   border-radius: 10px;
   border: hidden;
@@ -20,16 +27,17 @@ p {
   color: white;
   margin-top: 7%;
   margin-bottom: 3%;
+  cursor: pointer; /* 追加 */
+  transition: background-color 0.3s ease; /* 追加 */
 }
+
 .button:hover {
-  background-color: #00d12e;
+  background-color: #00b826; /* 色を少し変更 */
 }
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0ffff;
+
+.button:focus {
+  outline: none; /* フォーカス時のアウトラインを削除 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* 追加 */
 }
 .container {
   border: 5px solid rgb(40, 111, 1);
